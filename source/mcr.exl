@@ -1,0 +1,24 @@
+func mcr::SetStage(id) {
+    mcr::VarSetIndex(47, id);
+}
+
+func mcr::GetStage() {
+    return mcr::VarGetIndex(47);
+}
+
+func mcr::VarSetIndex(index, value) {
+    __exlcall__(0, index, value);
+}
+
+func mcr::VarGetIndex(index) {
+    return __exlcall__(1, index);
+}
+
+func mcr::GetActorTalkStatus(pid) {
+    return __exlcall__(2, pid);
+}
+
+func mcr::SetActorTalkStatus(pid, status) {
+    __exlcall__(3, pid, status);
+}
+
